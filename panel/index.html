@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+        <link rel="stylesheet" href="assets/main.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+        <script>
+        </script>
+    </head>
+    <body>
+        <div class="parents">
+            <div class="infobar">
+                <div class="widgetbar">
+                    <div class="timewidget">
+                        <i class="fas fa-clock" style="color: white; position: relative; top: 2px; left: 4px"></i>
+                        <span id="clockwidget" style="position: relative; top: 2px; left: 2px;"></span>
+                        <script>
+                            window.onload = liveClock();
+                            function liveClock() {
+                                const t = new Date().toLocaleTimeString("vi-VN");
+                                const d = new Date().toLocaleDateString("vi-VN");
+                                document.getElementById("clockwidget").innerHTML = t + " - " + d;
+                                setTimeout(liveClock, 1000);
+                            }
+                        </script>
+                    </div>
+                    <div class="sessioninfo">
+                        <p class="name" style="position:relative;margin:0px;top:1px;right:4px;">session@<span id="weblocation"></span></p>
+                        <script>
+                            const nameClass = "127.0.0.1"
+                            document.getElementById("weblocation").innerHTML = nameClass.toString();  
+                        </script>
+                    </div> 
+                </div>
+            </div>
+            <div class="panel">
+                <div class="logo">
+                    <p class="graphicElement1" style="left: 8px; font-size: xx-large; margin: 0px; position: relative; top: 4px; font-family: 'Bebas Neue', sans-serif; width: fit-content">gdps<span class="graphicElement2" style="color:dodgerblue;">Panel</span></p>
+                </div>
+            <hr style="width:device-width;height:1px;margin:0px;position:relative;border-style:solid;border-color:dodgerblue;background-color: dodgerblue;top:2px;">
+                <div class="panelContent" style="position: relative;top: 0px;width: device-width;">
+                    <div class="infomationBar" style="margin-top: 10px;">
+                        <span style="display: flex; flex-direction: row; position: relative; top: 4px; margin-left: 4px;"><i class="fas fa-user" style="position: relative; top: 4px; left: 4px; margin-right: 8px;"></i><p style="margin:0px;position:relative;left:4px;">Account Tasks</p></span>
+                    </div>
+                    <div class="Accounts">
+                        <a href="account/registerAccount.php" class="anchorFix"><button class="task1"><i class="fas fa-sign-in-alt"></i> Register Accounts</button></a>
+                        <a href="account/changePassword.php" class="anchorFix"><button class="task1"><i class="fas fa-redo-alt"></i> Change Passwords</button></a>
+                        <a href="account/changeUsername.php" class="anchorFix"><button class="task1"><i class="fas fa-redo-alt"></i> Change Usernames</button></a>
+                    </div>
+                    <div class="infomationBar">
+                        <span style="display: flex; flex-direction: row; position: relative; top: 4px; margin-left: 4px;"><i class="fas fa-cogs" style="position: relative; top: 4px; left: 4px; margin-right: 8px;"></i><p style="margin:0px;position:relative;left:4px;">Cron Jobs</p></span>
+                    </div>
+                    <div class="Cron">
+                        <a href="cron/cron.php" class="anchorFix"><button class="task1"><i class="fas fa-robot"></i> Run Cron</button></a>
+                    </div>
+                    <div class="infomationBar">
+                        <span style="display: flex; flex-direction: row; position: relative; top: 4px; margin-left: 4px;"><i class="fas fa-toolbox" style="position: relative; top: 4px; left: 4px; margin-right: 8px;"></i><p style="margin:0px;position:relative;left:4px;">Server Tools</p></span>
+                    </div>
+                    <div class="Tools">
+                        <a href="leaderboardsBan.php" class="anchorFix"><button class="task1"><i class="fas fa-ban"></i> Ban users</button></a>
+                        <a href="leaderboardsUnban.php" class="anchorFix"><button class="task1"><i class="fas fa-ban"></i> Pardon users</button></a>
+                        <a href="levelReupload.php" class="anchorFix"><button class="task1"><i class="fas fa-redo"></i> Reupload Levels</button></a>
+                        <a href="levelToGD.php" class="anchorFix"><button class="task1"><i class="fas fa-upload"></i> Upload level to RobTop's server</button></a>
+                        <a href="linkAcc.php" class="anchorFix"><button class="task1"><i class="fas fa-link"></i> Link accounts</button></a>
+                        <a href="packCreate.php" class="anchorFix"><button class="task1"><i class="fas fa-cubes"></i> Create Map Packs</button></a>
+                        <a href="revertLikes.php" class="anchorFix"><button class="task1"><i class="fas fa-history"></i> Revert Likes</button></a>
+                    </div>
+                    <div class="infomationBar">
+                        <span style="display: flex; flex-direction: row; position: relative; top: 4px; margin-left: 4px;"><i class="fas fa-link" style="position: relative; top: 4px; left: 4px; margin-right: 8px;"></i><p style="margin:0px;position:relative;left:4px;">Management Link</p></span>
+                    </div>
+                    <div class="Links">
+                        <a href="http://db.fhgdps.com/" class="anchorFix"><button class="task1"><i class="fas fa-database"></i> PHPMyAdmin</button></a>
+                        <a href="ftp://ftp.fhgdps.com/" class="anchorFix"><button class="task1"><i class="fas fa-file"></i> FTP Links (require FTP programs installed)</button></a>
+                    </div>
+                </div>
+                <div class="contact">
+                    <p style="font-family: monospace; margin-left: 8px;">GDPSPanel 0.1b (public.bn.16168.20210825)</p>
+                    <p style="font-family: monospace; margin-left: 8px; margin-top: -8px;">Made by <a href="https://discordapp.com/users/695457690150764545/">truongan</a> | <a href="https://github.com/mako258">GitHub</a></p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

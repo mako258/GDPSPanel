@@ -1,0 +1,52 @@
+body {
+    margin: 0px;
+}
+.widgetbar {
+    display: flex;
+    background-color: dodgerblue;
+    width: device-width;
+    height: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    flex-direction: row;
+}
+.sessioninfo {
+    position: relative;
+    margin-left: auto;
+    margin-right: 0;
+}
+.logo {
+    border: none;
+}
+.infomationBar {
+    margin-top: 12px;
+    height: 32px;
+    width: device-width;
+    color: white;
+    background-color: dodgerblue;
+    font-family: 'Open Sans', sans-serif;
+    width: calc(100% - 16px); 
+    margin-left: 8px; 
+    margin-right: 8px; 
+}
+.task1 {
+    position: relative;
+    height: 20px;
+    background-color: #dddddd;
+    margin-top: 8px;
+    width: calc(100% - 16px); 
+    margin-left: 8px; 
+    margin-right: 8px; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-style: none;
+    text-align: left;
+    border-left-style: solid;
+    border-left-width: 4px;
+    border-left-color: dodgerblue;
+}
+.anchorFix {
+    text-decoration: none;
+}
+.task1:hover {
+    background-color: #eeeeee;
+}
